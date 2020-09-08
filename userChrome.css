@@ -1,5 +1,5 @@
 /* MIN MAX CLOSE Remove */
-#TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; }
+/*#TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important; }*/
 
 /* Avoids white flash? */
 #tabbrowser-tabpanels{
@@ -52,7 +52,7 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 		-webkit-backdrop-filter: blur(32px) !important;
 		backdrop-filter: blur(32px) !important;
 		-moz-backdrop-filter: blur(32px) !important;
-	}*/ 
+	}*/
 	#urlbar-background {
 		display: none !important;
 
@@ -87,8 +87,9 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
  
 /* Icons */
 	#PanelUI-menu-button {
-		list-style-image: url(image/Fx-Browser-icon-oneColor-white.png) !important;}
+		list-style-image: url(image/Fx-Browser-icon-oneColor-white.png) !important;	}
 	#PanelUI-button {
+			-moz-box-ordinal-group: 0 !important; 
 			margin-inline-start: 0 !important;
 			padding-inline-start: 0 !important;
 			border: none !important;
@@ -308,7 +309,7 @@ isnt formated for different border radius */
 
 /* Width of the tabs. Important to have Fadein or it breaks fonctionality */
 	.tabbrowser-tab[fadein]:not([pinned]) { 
-	    max-width: 135px !important; /* 135px */
+	    max-width: 100% !important; /* 135px */
 		min-width: var(--my-tab-min-width) !important;
 		/*transition:none;
 		transition: min-width 300ms ease-out , max-width 100ms ease-out !important;*/
@@ -478,4 +479,12 @@ visibility: collapse !important;
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   opacity: 1;
   visibility: visible !important; 
+}
+
+.titlebar-buttonbox-container{
+  position: fixed;
+  top:0;
+  right:0;
+  height: 0px;
+  display: block !important;
 }
