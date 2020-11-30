@@ -1,6 +1,11 @@
 
-* {  
+/* Add thin scrollbar
+{  
     scrollbar-width: thin !important;
+}
+*/
+html,body{
+  scrollbar-color: rgb(65, 65, 63) #1f1f1f !important;
 }
 
 @-moz-document url("about:privatebrowsing"){
